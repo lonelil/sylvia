@@ -42,12 +42,7 @@ export default function Watch() {
                 <div className="flex items-center gap-3 mt-2">
                   <img
                     className="w-12 h-12 rounded-full"
-                    src={
-                      video.uploaderAvatar?.replace(
-                        "https://pipedproxy.kavin.rocks",
-                        "https://yt3.ggpht.com"
-                      ) ?? ""
-                    }
+                    src={video.uploaderAvatar ?? ""}
                   ></img>
                   <div className="flex flex-col">
                     <Link to={video.uploaderUrl}>
@@ -86,14 +81,7 @@ export default function Watch() {
                     <div className="flex items-center gap-3 mt-3">
                       <img
                         className="w-[168px] h-[94px] rounded-md"
-                        src={
-                          video.thumbnail
-                            ? `https://i.ytimg.com/vi/${video.url.replace(
-                                "/watch?v=",
-                                ""
-                              )}/maxresdefault.jpg`
-                            : ""
-                        }
+                        src={video.thumbnail ?? ""}
                         loading="lazy"
                       ></img>
                       <div className="flex flex-col">
@@ -102,12 +90,7 @@ export default function Watch() {
                         </strong>
                         <span className="text-slate-500 font-medium dark:text-slate-400 inline-flex items-baseline">
                           <img
-                            src={
-                              video.uploaderAvatar?.replace(
-                                "https://pipedproxy.kavin.rocks",
-                                "https://yt3.ggpht.com"
-                              ) ?? ""
-                            }
+                            src={video.uploaderAvatar ?? ""}
                             alt=""
                             className="self-center w-5 h-5 rounded-full mr-1"
                           />

@@ -18,24 +18,14 @@ export default function Channel() {
       <section className="h-full min-h-screen overflow-hidden">
         <img
           className="justify-center w-full h-64 object-cover"
-          src={
-            channel.bannerUrl?.replace(
-              "https://pipedproxy.kavin.rocks",
-              "https://yt3.ggpht.com"
-            ) ?? ""
-          }
+          src={channel.bannerUrl ?? ""}
           alt="Banner"
           loading="lazy"
         ></img>
         <div className="flex items-center gap-3 p-6">
           <img
             className="w-12 h-12 rounded-full"
-            src={
-              channel.avatarUrl?.replace(
-                "https://pipedproxy.kavin.rocks",
-                "https://yt3.ggpht.com"
-              ) ?? ""
-            }
+            src={channel.avatarUrl ?? ""}
           ></img>
           <div className="flex flex-col">
             <strong className="text-slate-900 font-medium dark:text-slate-200">
@@ -70,14 +60,7 @@ export default function Channel() {
                 <div className="card card-compact h-80 bg-secondary shadow-xl">
                   <figure>
                     <img
-                      src={
-                        video.thumbnail
-                          ? `https://i.ytimg.com/vi/${video.url.replace(
-                              "/watch?v=",
-                              ""
-                            )}/maxresdefault.jpg`
-                          : ""
-                      }
+                      src={video.thumbnail ?? ""}
                       alt="Video"
                       loading="lazy"
                     />

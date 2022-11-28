@@ -20,18 +20,7 @@ export default function Home() {
               <Link to={video.url} key={i}>
                 <div className="card card-compact h-80 bg-secondary shadow-xl">
                   <figure>
-                    <img
-                      src={
-                        video.thumbnail
-                          ? `https://i.ytimg.com/vi/${video.url.replace(
-                              "/watch?v=",
-                              ""
-                            )}/maxresdefault.jpg`
-                          : ""
-                      }
-                      alt="Video"
-                      loading="lazy"
-                    />
+                    <img src={video.thumbnail ?? ""} alt="Video" loading="lazy" />
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title truncate text-ellipsis overflow-hidden">

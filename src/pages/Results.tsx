@@ -28,11 +28,7 @@ export default function Results() {
                     <div className="card card-compact h-80 bg-secondary shadow-xl">
                       <figure>
                         <img
-                          src={
-                            video.videoThumbnails
-                              ? `https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`
-                              : ""
-                          }
+                          src={video.videoThumbnails ?? ""}
                           alt="Video"
                           loading="lazy"
                         />
