@@ -21,7 +21,7 @@ export default function Watch() {
         hls.loadSource(data.hls);
         hls.attachMedia(video);
         //@ts-ignore
-        //plyrRef.current.plyr.play();
+        plyrRef.current.plyr.play();
       });
   }, [searchParams]);
 
