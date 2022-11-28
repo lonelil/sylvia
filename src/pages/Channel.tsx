@@ -26,6 +26,7 @@ export default function Channel() {
           <img
             className="w-12 h-12 rounded-full"
             src={channel.avatarUrl ?? ""}
+            loading="lazy"
           ></img>
           <div className="flex flex-col">
             <strong className="text-slate-900 font-medium dark:text-slate-200">

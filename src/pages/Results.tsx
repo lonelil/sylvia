@@ -60,6 +60,7 @@ export default function Results() {
                           <img
                             className="w-12 h-12 rounded-full"
                             src={video.thumbnail ?? ""}
+                            loading="lazy"
                           ></img>
                           <div className="flex flex-col">
                             <strong className="text-slate-900 font-medium dark:text-slate-200">

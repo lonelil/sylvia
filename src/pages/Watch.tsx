@@ -51,6 +51,7 @@ export default function Watch() {
                   <img
                     className="w-12 h-12 rounded-full"
                     src={video.uploaderAvatar ?? ""}
+                    loading="lazy"
                   ></img>
                   <div className="flex flex-col">
                     <Link to={video.uploaderUrl}>
@@ -214,6 +215,7 @@ export default function Watch() {
                             src={video.uploaderAvatar ?? ""}
                             alt=""
                             className="self-center w-5 h-5 rounded-full mr-1"
+                            loading="lazy"
                           />
                           <span>{video.uploaderName ?? ""}</span>
                         </span>
