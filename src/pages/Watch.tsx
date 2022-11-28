@@ -69,6 +69,7 @@ export default function Watch() {
                             ? `https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`
                             : ""
                         }
+                        loading="lazy"
                       ></img>
                       <div className="flex flex-col">
                         <strong className="text-slate-900 font-medium dark:text-slate-200">
