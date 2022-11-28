@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [videos, setVideos] = useState<any[]>([]);
@@ -10,40 +11,40 @@ export default function Home() {
       });
   }, []);
 
-  console.log(videos);
   return (
     <>
-      <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-2 md:grid-cols-3 lg:grid-cols-4">
-        {videos &&
-          videos.map((video, i) => (
-            <>
-              <div
-                className="card card-compact h-80 bg-secondary shadow-xl"
-                key={i}
-              >
-                <figure>
-                  <img
-                    src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
-                    alt="Video"
-                    loading="lazy"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title truncate text-ellipsis overflow-hidden">
-                    {video.title}
-                  </h2>
-                  <p>
-                    <span>{video.author}</span>
-                    <br />
-                    <span>
-                      {video.viewCount} views • {video.publishedText}
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </>
-          ))}
-      </div>
+      <section className="h-full overflow-hidden">
+        <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-2 md:grid-cols-3 lg:grid-cols-4">
+          {videos &&
+            videos.map((video, i) => (
+              <>
+                <Link to={`/watch?v=${video.videoId}`} key={i}>
+                  <div className="card card-compact h-80 bg-secondary shadow-xl">
+                    <figure>
+                      <img
+                        src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
+                        alt="Video"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div className="card-body">
+                      <h2 className="card-title truncate text-ellipsis overflow-hidden">
+                        {video.title}
+                      </h2>
+                      <p>
+                        <span>{video.author}</span>
+                        <br />
+                        <span>
+                          {video.viewCount} views • {video.publishedText}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </>
+            ))}
+        </div>
+      </section>
     </>
   );
 }
