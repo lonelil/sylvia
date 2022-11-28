@@ -13,7 +13,7 @@ export default function Home() {
   console.log(videos);
   return (
     <>
-      <div className="grid w-full grid-cols-4 gap-4 px-6 justify-center items-center py-5">
+      <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-2 md:grid-cols-3 lg:grid-cols-4">
         {videos &&
           videos.map((video, i) => (
             <>
