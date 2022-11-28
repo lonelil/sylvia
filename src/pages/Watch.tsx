@@ -47,9 +47,11 @@ export default function Watch() {
                     src={video.authorThumbnails?.at(-1).url ?? ""}
                   ></img>
                   <div className="flex flex-col">
-                    <strong className="text-slate-900 font-medium dark:text-slate-200">
-                      {video.author ?? ""}
-                    </strong>
+                    <Link to={`/channel/${video.authorId}`}>
+                      <strong className="text-slate-900 font-medium dark:text-slate-200">
+                        {video.author ?? ""}
+                      </strong>
+                    </Link>
                     <span className="text-slate-500 font-medium dark:text-slate-400">
                       {(video.subCountText ?? "") + " Subscribers"}
                     </span>
