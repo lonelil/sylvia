@@ -14,18 +14,27 @@ export default function Home() {
   return (
     <>
       <section className="h-full min-h-screen overflow-hidden">
-        <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-4 md:grid-cols-5 lg:grid-cols-6">
           {videos &&
             videos.map((video, i) => (
               <Link to={video.url} key={i}>
-                <div className="card card-compact h-80 bg-secondary shadow-xl">
+                <div className="card card-compact h-50 bg-secondary shadow-xl">
                   <figure>
-                    <img src={video.thumbnail ?? ""} alt="Video" loading="lazy" />
+                    <img
+                      src={video.thumbnail ?? ""}
+                      alt="Video"
+                      loading="lazy"
+                    />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title truncate text-ellipsis overflow-hidden">
-                      {video.title}
-                    </h2>
+                    <div
+                      className="tooltip tooltip-primary"
+                      data-tip={video.title}
+                    >
+                      <h2 className="card-title truncate text-ellipsis overflow-hidden">
+                        {video.title}
+                      </h2>
+                    </div>
                     <p>
                       <span>
                         {video.uploaderName}
