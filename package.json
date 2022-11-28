@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "daisyui": "^2.42.1",
+    "hls.js": "^1.2.7",
     "plyr-react": "^5.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
