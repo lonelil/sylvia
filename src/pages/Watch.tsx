@@ -64,7 +64,11 @@ export default function Watch() {
                     <div className="flex items-center gap-3 mt-3">
                       <img
                         className="w-[168px] h-[94px] rounded-md"
-                        src={video.videoThumbnails[0]?.url ?? ""}
+                        src={
+                          video.videoThumbnails
+                            ? `https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`
+                            : ""
+                        }
                       ></img>
                       <div className="flex flex-col">
                         <strong className="text-slate-900 font-medium dark:text-slate-200">
