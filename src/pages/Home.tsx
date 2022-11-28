@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="h-full overflow-hidden">
+      <section className="h-full min-h-screen overflow-hidden">
         <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-2 md:grid-cols-3 lg:grid-cols-4">
           {videos &&
             videos.map((video, i) => (
