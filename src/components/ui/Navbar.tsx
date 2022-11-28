@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   return (
     <div className="navbar bg-secondary h-12 min-h-0">
       <div className="navbar-start">
@@ -10,7 +11,12 @@ export default function Navbar() {
       </div>
       <div className="navbar-center">
         <div className="form-control">
-          <form action="/results">
+          <form
+            onSubmit={(e: any) => {
+              e.preventDefault();
+              navigate(`/results?search_query=${e.target[0].value}`);
+            }}
+          >
             <label className="input-group input-group-sm">
               <input
                 type="text"
@@ -25,7 +31,6 @@ export default function Navbar() {
                 </button>
               </span>
             </label>
-            
           </form>
         </div>
       </div>

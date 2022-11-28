@@ -15,7 +15,6 @@ export default function Results() {
         setVideos(data);
       });
   }, [searchParams]);
-  console.log(videos);
 
   return (
     <>

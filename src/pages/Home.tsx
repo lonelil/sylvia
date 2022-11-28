@@ -10,7 +10,6 @@ export default function Home() {
         setVideos(data);
       });
   }, []);
-  console.log(videos);
 
   return (
     <>
