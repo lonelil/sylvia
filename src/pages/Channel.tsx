@@ -54,11 +54,11 @@ export default function Channel() {
             </span>
           </div>
         </div>
-        <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid w-full grid-cols-1 gap-4 px-6 justify-center items-center py-5 sm:grid-colos-4 md:grid-cols-5 lg:grid-cols-6">
           {channel.relatedStreams &&
             channel.relatedStreams.map((video: any, i: number) => (
               <Link to={video.url} key={i}>
-                <div className="card card-compact h-80 bg-secondary shadow-xl">
+                <div className="card card-compact h-50 bg-secondary shadow-xl">
                   <figure>
                     <img
                       src={video.thumbnail ?? ""}
