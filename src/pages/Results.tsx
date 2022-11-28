@@ -8,7 +8,7 @@ export default function Results() {
     fetch(
       `https://vid.puffyan.us/api/v1/search?q=${searchParams.get(
         "search_query"
-      )}&type=channel`
+      )}&type=all`
     )
       .then((res) => res.json())
       .then((data) => {

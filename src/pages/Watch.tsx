@@ -20,6 +20,8 @@ export default function Watch() {
         const hls = new Hls();
         hls.loadSource(data.hls);
         hls.attachMedia(video);
+        //@ts-ignore
+        plyrRef.current.plyr.play();
       });
   }, [searchParams]);
 
